@@ -1,12 +1,18 @@
-from food import Food 
-
 class Menu(object):
-	def __init__(self,foods):
-		self.foods=foods
+    """class for modelling the structure and data of a menu
+    """
 
-	def display(self):
-		header = "{0}\t\t\t{1}\n".format("name", "price")
-		print(header)
-		for food in self.foods:
-			print "{0}\t\t\t{1}".format(food.name, food.price)
-			
+    def __init__(self, foods):
+        """create instance variable for array of foods
+        """
+        self.foods = foods
+
+    def display(self):
+        """return a nice readable format for the menu
+        """
+        out = "{0}\t\t\t{1}\n\n".format("name", "price")
+
+        for food in self.foods:
+            out += "{0}\t\t\t{1}\n".format(food.name, food.price)
+
+        return out
