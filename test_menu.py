@@ -26,9 +26,5 @@ class  Test_menuTestCase(unittest.TestCase):
     def test_food_instance(self):
         self.assertIsInstance(self._addition2, food.Food)
     
-    #def tearDown(self):
-    #    self.foo.dispose()
-    #    self.foo = None
-
 if __name__ == '__main__':
     unittest.main()
